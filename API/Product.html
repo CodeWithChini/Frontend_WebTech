@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            #card-container{
+                display:  flex;
+                flex-wrap: wrap;
+            }
+            .card {
+                width: 18rem;
+                margin: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;
+
+            }
+
+            .card-img-top {
+                width: 100%;
+                height: auto;
+            }
+
+            .card-body {
+                padding: 10px;
+            }
+        </style>
+</head>
+<body>
+<div id="card-container"></div>
+</body>
+    <script>
+        let temp = '';
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://6881dd4266a7eb81224c5c1e.mockapi.io/product", true);
+        xhttp.send();
+        xhttp.onload = function () {
+        if (this.status === 200) {
+            const data = JSON.parse(this.responseText);
+            data.map(student => {
+            temp += `<div class="card" style="width: 18rem;">
+                    <img src="${student.avatar}" class="card-img-top" alt="${student.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${student.name}</h5>
+                        <p class="card-text">Price: ${student.Price}</p>
+                    </div>
+                </div>`;
+            });
+       document.getElementById('card-container').innerHTML = temp;
+        } else {
+        alert("Data not found. Please check the API endpoint.");
+        }
+    };
+</script>
+</html>

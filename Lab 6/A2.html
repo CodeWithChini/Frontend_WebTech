@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eum molestiae debitis aliquid iure assumenda id eveniet odit. Dignissimos, blanditiis.</p>
+    <button id="btn">click me</button>
+    
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+            document.getElementById("txt").style.backgroundColor = "green";
+        })
+        document.getElementById("btn").addEventListener("dblclick", () => {
+                document.getElementById("txt").style.backgroundColor = "red";
+         })
+        document.getElementById("btn").addEventListener("mousedown", () => {
+                    document.getElementById("txt").style.backgroundColor = "blue";
+         })
+         document.getElementById("btn").addEventListener("mousemove", () => {
+                document.getElementById("txt").style.backgroundColor = "pink";
+        })
+        document.getElementById("btn").addEventListener("mouseover", () => {
+                document.getElementById("txt").style.backgroundColor = "grey";
+        })
+        document.getElementById("btn").addEventListener("mousemove", () => {
+                document.getElementById("txt").style.backgroundColor = "yellow";
+        })
+        document.getElementById("btn").addEventListener("mouseout", () => {
+                document.getElementById("txt").style.backgroundColor = "brown";
+            })
+    </script>
+</body>
+</html>

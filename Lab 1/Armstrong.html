@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let n = parseInt(prompt("Enter a number"));
+
+        if (isNaN(n)) {
+            document.write("Please enter a valid number.");
+        } else {
+
+            let digit = n.toString().length;
+            let count = n;
+
+            while (count > 0) {
+                count = Math.floor(count / 10);
+                
+            }
+
+            document.write("The number of digits in " + n + " is: " + digit);
+        }
+    </script>
+</body>
+
+</html>

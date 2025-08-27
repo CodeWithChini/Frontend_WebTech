@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        table td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0">
+        <tr>
+            <td colspan="4"><input type="text" id="mytext"></td>
+        </tr>
+        <tr>
+            <td><button onclick="dltall()">AC</button></td>
+            <td><button onclick="deletefromlast()"><-</button></td>
+            <td><button onclick="display('%')">%</button></td>
+            <td><button onclick="display('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('7')">7</button></td>
+            <td><button onclick="display('8')">8</button></td>
+            <td><button onclick="display('9')">9</button></td>
+            <td><button onclick="display('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('4')">4</button></td>
+            <td><button onclick="display('5')">5</button></td>
+            <td><button onclick="display('6')">6</button></td>
+            <td><button onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('1')">1</button></td>
+            <td><button onclick="display('2')">2</button></td>
+            <td><button onclick="display('3')">3</button></td>
+            <td><button onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('00')">00</button></td>
+            <td><button onclick="display('0')">0</button></td>
+            <td><button onclick="display('.')">.</button></td>
+            <td><button onclick="answerofinput()">=</button></td>
+        </tr>
+    </table>
+
+
+    <script>
+            function display(num) {
+                document.getElementById("mytext").value+=num
+            }
+            function dltall() {
+                document.getElementById("mytext").value = ''
+            }
+            function deletefromlast() {
+                exp =  document.getElementById("mytext").value
+                finalans = exp.slice(0,-1)
+                document.getElementById("mytext").value = finalans
+            }
+
+            function answerofinput(params) {
+                exp = document.getElementById("mytext").value
+                equal = eval(exp)
+                document.getElementById("mytext").value = equal
+            }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

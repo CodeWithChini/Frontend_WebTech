@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Image</th>
+        </tr>
+        <tbody id="tblbody">
+        </tbody>
+    </table>
+</body>
+
+<script>
+    temp = ''
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "https://6881dd4266a7eb81224c5c1e.mockapi.io/Student", true);
+    xhttp.send();
+    xhttp.onload = function() {
+        if (this.status === 200) {
+            const data = JSON.parse(this.responseText);
+            data.map(student => {
+                temp+= `<tr>
+                    <td>${student.id}</td>
+                    <td>${student.name}</td>
+                    <td><img width='300px' src='${student.Image}'></td>
+                    </tr>`;
+            })
+            tblbody.innerHTML = temp;
+        }
+        else {
+             alert("data not found");
+        }
+    };
+</script>
+</html>

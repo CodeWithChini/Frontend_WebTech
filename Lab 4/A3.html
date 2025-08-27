@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+    <tbody>
+        <script>
+            const students = [
+                    {
+                        "id": 1,
+                        "name": "Alice Smith",
+                        "age": 15,
+                        "grade": "10th",
+                        "subjects": ["Math", "Science", "English"]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Bob Johnson",
+                        "age": 14,
+                        "grade": "9th",
+                        "subjects": ["History", "Math", "Art"]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Charlie Brown",
+                        "age": 16,
+                        "grade": "11th",
+                        "subjects": ["Biology", "Chemistry", "Physics"]
+                    },
+                    {
+                        "id": 4,
+                        "name": "Diana Prince",
+                        "age": 17,
+                        "grade": "12th",
+                        "subjects": ["English", "History", "Economics"]
+                    },
+                    {
+                        "id": 5,
+                        "name": "Ethan Hunt",
+                        "age": 15,
+                        "grade": "10th",
+                        "subjects": ["Physical Education", "Math", "Geography"]
+                    }
+                ];
+
+            document.write("<table>")
+            document.write("<thead>")
+            document.write("<tr>");
+            document.write("<th>id</th>");
+            document.write("<th>name</th>");
+            document.write("<th>age</th>");
+            document.write("<th>grade</th>");
+            document.write("<th>subjects</th>");
+            document.write("</tr>");
+            document.write("<thead>")
+
+            for (i = 0; i < students.length; i++) {
+                document.write("<tr>");
+                document.write("<td>" + students[i].id + "</td>");
+                document.write("<td>" + students[i].name + "</td>");
+                document.write("<td>" + students[i].age + "</td>");
+                document.write("<td>" + students[i].grade + "</td>");
+                document.write("<td>" + students[i].subjects + "</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>")
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="">Student Name</label><br>
+    <input type="text" id="stuName">
+    <button id="addeditbtn">Add</button>
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        <tbody id="tblbody">
+        </tbody>
+    </table>
+
+    <script>
+        let arr = [];
+        let editindex = -1;
+
+        function displays() {
+            let temp = '';
+            for (let i = 0; i < arr.length; i++) {
+                temp += `<tr>
+                            <td>${i + 1}</td>
+                            <td>${arr[i]}</td>
+                            <td>
+                                <button class="edit-btn" data-index="${i}">Edit</button>
+                                <button class="delete-btn" data-index="${i}">Delete</button>
+                            </td>
+                          </tr>`;
+            }
+            $('#tblbody').html(temp);
+        }
+
+        $(document).ready(function () {
+            $('#addeditbtn').click(function () {
+                const uname = $('#stuName').val();
+                if (editindex !== -1) {
+                    arr[editindex] = uname;
+                    editindex = -1;
+                    $(this).text('Add');
+                } else {
+                    if (uname === '') {
+                        alert("Please Enter User Name : ");
+                    } else {
+                        arr.push(uname);
+                    }
+                }
+                $('#stuName').val('');
+                displays();
+            });
+
+            $(document).on('click', '.edit-btn', function () {
+                editindex = $(this).data('index');
+                $('#stuName').val(arr[editindex]);
+                $('#addeditbtn').text('Edit');
+            });
+
+            $(document).on('click', '.delete-btn', function () {
+                const index = $(this).data('index');
+                arr.splice(index, 1);
+                displays();
+            });
+        });
+    </script>
+</body>
+
+</html>

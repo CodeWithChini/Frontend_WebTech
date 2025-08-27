@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         arr = new Array(5);
+
+            for (i = 0; i < 5; i++) {
+                arr[i] = parseInt(prompt("Enter element: "));
+            }
+
+            for(i = 0; i < 5 - 1 ;i++){
+                for(j = 0 ; j < 5 - i -1 ; j++)
+               {
+                if(arr[j] > arr[j+1]){
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+                }
+            }
+
+            for (i = 0; i < 5; i++) {
+                    document.write(arr[i] + " ");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(5);
+
+        for (let i = 0; i < 5; i++) {
+            arr[i] = parseInt(prompt("Enter element: "));
+        }
+
+        // Bubble sort algorithm
+        for (let j = 0; j < arr.length - 1; j++) {
+            for (let i = 0; i < arr.length - 1 - j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    // Swap elements
+                    let temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+            }
+        }
+
+        for (let i = 0; i < 5; i++) {
+            document.write(arr[i] + " ");
+        }
+    </script>
+</body>
+
+</html> -->

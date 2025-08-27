@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="SU">Slide Dowm</button>
+    <button class="SD">Slide Up</button>
+    <button class="ST">Slide Toggle</button>
+    <img src="https://cdn.pixabay.com/photo/2023/09/21/14/17/italy-8266783_1280.jpg" alt="" width="300" height="200">
+
+    <script>
+        $('.SU').click(function () {
+            $('img').slideDown();
+        })
+        $('.SD').click(function () {
+            $('img').slideUp();
+        })
+        $('.ST').click(function () {
+            $('img').slideToggle();
+        })
+    </script>
+</body>
+
+</html>

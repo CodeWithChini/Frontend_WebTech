@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+        let [a,, b, c, d, e] = arr;
+        console.log(a, b, c, d, e);
+
+        let[x, y, ...other] = arr;
+        console.log(x, y, other);
+
+        let [first, second, ...rest] = arr;
+        console.log(rest);
+    </script>
+</body>
+</html>
