@@ -12,6 +12,8 @@ import Demo from './Component/array.jsx'
 import StudentDemo from "./Component/Lab 17/Student.jsx";
 import A from "./Component/Lab 18/Property_Drill.jsx";
 import Parent from "./Component/Lab 18/Card.jsx";
+import Calculator from './Component/Lab 22/Calculator.jsx'
+import Sintific from './Component/Lab 22/Sintific.jsx'
 
 //          Lab 14
 
@@ -112,10 +114,14 @@ createRoot(document.getElementById('root')).render(
         <StudentDemo /> */}
 
 
-         {/*Lab 18*/}
+         {/* Lab 18
         <A />
-        <Parent /> 
+        <Parent /> */}
 
+        {/*Lab 22*/}
+            <Calculator/>
+
+        <Sintific/>
 
 
   </StrictMode>,
