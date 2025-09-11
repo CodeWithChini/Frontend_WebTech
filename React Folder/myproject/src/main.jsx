@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+// import './index.css'
 import App from './App.jsx'
 import React from 'react'
 // import { Greet, Greet1, Greet2, Name } from './Component/Greet.jsx'
@@ -14,6 +14,7 @@ import A from "./Component/Lab 18/Property_Drill.jsx";
 import Parent from "./Component/Lab 18/Card.jsx";
 import Calculator from './Component/Lab 22/Calculator.jsx'
 import Sintific from './Component/Lab 22/Sintific.jsx'
+import ProductCrud from './Component/Lab 23/Crud.jsx'
 
 //          Lab 14
 
@@ -119,9 +120,13 @@ createRoot(document.getElementById('root')).render(
         <Parent /> */}
 
         {/*Lab 22*/}
-            <Calculator/>
+            {/* <Calculator/>
 
-        <Sintific/>
+        <Sintific/> */}
+
+        {/* Lab 23 */}
+        <ProductCrud />
+
 
 
   </StrictMode>,
