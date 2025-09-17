@@ -15,6 +15,7 @@ import Parent from "./Component/Lab 18/Card.jsx";
 import Calculator from './Component/Lab 22/Calculator.jsx'
 import Sintific from './Component/Lab 22/Sintific.jsx'
 import ProductCrud from './Component/Lab 23/Crud.jsx'
+import StudentList from "./Component/Lab 24/Stu2.jsx";
 
 //          Lab 14
 
@@ -126,6 +127,10 @@ createRoot(document.getElementById('root')).render(
 
         {/* Lab 23 */}
         <ProductCrud />
+
+        {/* <hr /> */}
+        {/* Lab 24 */}
+        {/* <StudentList/> */}
 
 
 
